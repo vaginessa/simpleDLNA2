@@ -37,8 +37,8 @@ namespace NMaier.SimpleDlna.Utilities
     private static readonly Regex regDimensions = new Regex(
       @"Video: .+ ([0-9]{2,})x([0-9]{2,}) ", RegexOptions.Compiled);
 
-    public static readonly string FFmpegExecutable =
-      FindExecutable("ffmpeg");
+    public static readonly string FFmpegExecutable = null;
+      FindExecutable("_ffmpeg");
 
     private static DirectoryInfo GetFFMpegFolder(
       Environment.SpecialFolder folder)
