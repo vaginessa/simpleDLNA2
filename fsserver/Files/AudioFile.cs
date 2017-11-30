@@ -251,7 +251,7 @@ namespace NMaier.SimpleDlna.FileMediaServer
           try {
             var t = tl.Tag;
             SetProperties(t);
-            InitCover(t);
+            //InitCover(t);
           }
           catch (Exception ex) {
             Debug("Failed to transpose Tag props", ex);
