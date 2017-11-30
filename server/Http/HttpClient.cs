@@ -331,7 +331,7 @@ namespace NMaier.SimpleDlna.Server
           responseStream.AddStream(responseBody);
           responseBody = null;
         }
-        InfoFormat("{0} - {1} response for {2}", this, (uint)statusCode, Path);
+        DebugFormat("{0} - {1} response for {2}", this, (uint)statusCode, Path);
         state = HttpStates.Writing;
         var sp = new StreamPump(responseStream, stream, BUFFER_SIZE);
         sp.Pump((pump, result) =>
@@ -386,7 +386,7 @@ namespace NMaier.SimpleDlna.Server
 #if DEBUG
         Warn(String.Format("{0} - Got a {2}: {1}", this, path, ex.Code), ex);
 #else
-        InfoFormat("{0} - Got a {2}: {1}", this, Path, ex.Code);
+        DebugFormat("{0} - Got a {2}: {1}", this, Path, ex.Code);
 #endif
         switch (ex.Code) {
         case HttpCode.NotFound:
