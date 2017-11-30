@@ -99,13 +99,17 @@ namespace NMaier.SimpleDlna.Server
         return new ItemResponse(Prefix, request, item);
       }
       if (path.StartsWith("cover/", StringComparison.Ordinal)) {
-        var id = path.Split('/')[1];
+        /*
+		var id = path.Split('/')[1];
         InfoFormat("Serving cover {0}", id);
         var item = GetItem(id) as IMediaCover;
         if (item == null) {
           throw new HttpStatusException(HttpCode.NotFound);
         }
         return new ItemResponse(Prefix, request, item.Cover, "Interactive");
+		*/
+		throw new HttpStatusException(HttpCode.NotFound);
+		
       }
       if (path.StartsWith("subtitle/", StringComparison.Ordinal)) {
         var id = path.Split('/')[1];
