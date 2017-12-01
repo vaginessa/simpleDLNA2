@@ -13,4 +13,4 @@ setup/*.cmd
 pages/
 cov-int*
 compile.bat
-build
+sdlna/build
