@@ -217,8 +217,7 @@ namespace NMaier.SimpleDlna.Server.Ssdp
         false
         );
       InfoFormat(
-        "{2}, {1} - Responded to a {0} request", dev.Type, endpoint,
-        dev.Address);
+        "{1} : {0}", dev.Type, endpoint.Address);
     }
 
     private void Tick(object sender, ElapsedEventArgs e)
