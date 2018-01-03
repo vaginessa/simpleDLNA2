@@ -44,7 +44,7 @@ namespace NMaier.SimpleDlna.Server.Ssdp
       new ConcurrentQueue<Datagram>();
 
     private readonly Timer notificationTimer =
-      new Timer(60000);
+      new Timer(30000);
 
     private readonly Timer queueTimer =
       new Timer(1000);
@@ -223,7 +223,7 @@ namespace NMaier.SimpleDlna.Server.Ssdp
     private void Tick(object sender, ElapsedEventArgs e)
     {
       Debug("Sending SSDP notifications!");
-      notificationTimer.Interval = random.Next(60000, 120000);
+      // notificationTimer.Interval = random.Next(60000, 120000);
       NotifyAll();
     }
 
