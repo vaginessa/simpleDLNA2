@@ -162,12 +162,13 @@ namespace NMaier.SimpleDlna.FileMediaServer
     {
       get {
         MaybeInit();
-        if (!string.IsNullOrWhiteSpace(title)) {
+        /*if (!string.IsNullOrWhiteSpace(title)) {
           if (track.HasValue) {
             return $"{track.Value:D2}. — {title}";
           }
           return title;
         }
+		*/
         return base.Title;
       }
     }
