@@ -74,7 +74,8 @@ namespace NMaier.SimpleDlna.Utilities
       if (name == null) {
         throw new ArgumentNullException(nameof(name));
       }
-
+	  return name;
+	  /* NONO
       var san = trimmore.Replace(
         sanitizer.Replace(name, string.Empty),
         string.Empty).Trim();
@@ -82,6 +83,7 @@ namespace NMaier.SimpleDlna.Utilities
         return name;
       }
       return san.StemNameBase();
+	  */
     }
 
     public static string StemNameBase(this string name)
@@ -89,7 +91,8 @@ namespace NMaier.SimpleDlna.Utilities
       if (name == null) {
         throw new ArgumentNullException(nameof(name));
       }
-
+	  return name;
+	  /* NONO
       if (!name.Contains(" ")) {
         name = name.Replace('_', ' ');
         if (!name.Contains(" ")) {
@@ -107,6 +110,7 @@ namespace NMaier.SimpleDlna.Utilities
         return name;
       }
       return ws;
+	  */
     }
   }
 }
